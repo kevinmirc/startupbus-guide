@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <title>StartupBus Guide</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
-    <!-- Compiled and minified CSS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
   <body>
     <div id="app"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://browser.sentry-cdn.com/5.2.0/bundle.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      Sentry.init({ dsn: 'https://18c439c9f8d946378debaf87f715d4f0@sentry.io/1457257' });
+    </script>
     <!-- on npm run deploy-build, this will get moved to /docs and be edited to src="/build.js" -->
     <script src="./build.js"></script>
   </body>
