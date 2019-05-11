@@ -17,8 +17,11 @@ const router = new Router({
   },
   routes: [
     {
-      name: 'Root',
       path: '',
+      redirect: { name: 'Buses' },
+    },
+    {
+      path: '/',
       redirect: { name: 'Buses' },
     },
     {
