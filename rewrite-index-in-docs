@@ -1,0 +1,1 @@
+sed -i '' 's/\<script src=\"\/dist\/build.js\"\>\<\/script\>/\<script src=\"\/build.js\"\>\<\/script\>/g' ./docs/index.html
