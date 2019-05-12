@@ -34,8 +34,8 @@ This uses [Airtable](https://airtable.com/) as the database. Airtable offers an 
 
 ### Deployments
 
-- Build via `npm run build`
-- Commit and push to master on GitHub.
+- Build via `npm run deploy-build`
+- Commit and push to master on GitHub (docs director must be commited to git).
 - Hosted on github pages.
 
 ### Updating for Next Year
