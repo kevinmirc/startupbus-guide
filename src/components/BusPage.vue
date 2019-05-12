@@ -1,7 +1,7 @@
 <template>
   <div class="full-height">
     <div class="row full-height">
-      <div class="col s10 full-height scroll" style="padding: 0 8px;">
+      <div class="col s10 full-height scroll">
         <router-view></router-view>
       </div>
       <div class="col s2 full-height" style="margin: 0; padding: 0;">
