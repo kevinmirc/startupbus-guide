@@ -4,6 +4,7 @@
     <SponsorCardsList v-if="resource === 'sponsors'" :sponsors="resourceItems"></SponsorCardsList>
     <LocationList v-if="resource === 'locations'" :locations="resourceItems"></LocationList>
     <PersonnelList v-if="resource === 'personnel'" :personnel="resourceItems"></PersonnelList>
+    <ScheduleCollection v-if="resource === 'schedule'" :scheduleItems="resourceItems"></ScheduleCollection>
   </div>
 </template>
 <script>
@@ -12,9 +13,10 @@ import ErrorMessage from './ErrorMessage';
 import SponsorCardsList from './SponsorCardsList';
 import LocationList from './LocationList';
 import PersonnelList from './PersonnelList';
+import ScheduleCollection from './ScheduleCollection';
 
 export default {
-  components: { SponsorCardsList, LocationList, PersonnelList },
+  components: { SponsorCardsList, LocationList, PersonnelList, ScheduleCollection },
   props: {
     /**
      * id {string} The Acronym for the bus (for Florida it's FL).

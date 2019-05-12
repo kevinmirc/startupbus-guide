@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="card z-depth-1" v-for="sponsor in sponsors" :key="sponsor.id">
-      <div class="card-image waves-effect waves-block waves-light">
+      <div class="card-image">
         <img class="activator" :src="sponsor.fields.Image | thumbnail">
       </div>
       <div class="card-content">

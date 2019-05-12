@@ -3,17 +3,21 @@
     <li class="collection-item avatar" v-for="location in locations" :key="location.id">
       <i class="material-icons circle teal lighten-2">{{ location.fields.Icon }}</i>
       <span class="title">{{ location.fields.Name }}</span>
-      <small v-if="location.fields.Address">
-        <p>{{ location.fields.Address }}</p>
-      </small>
+
+      <p class="small-text" v-if="location.fields.Address">{{ location.fields.Address }}</p>
+
       <br>
-      <small v-if="location.fields.Description">
-        <p>{{ location.fields.Description }}</p>
-      </small>
+
+      <p class="small-text" v-if="location.fields.Description">{{ location.fields.Description }}</p>
+
       <br>
-      <small v-if="location.fields['Link URL']">
-        <p><a target="_blank" :href="location.fields['Link URL']">{{ location.fields['Link Title'] }}</a></p>
-      </small>
+
+      <p class="small-text" v-if="location.fields.Description">
+        <a target="_blank" :href="location.fields['Link URL']">
+          {{ location.fields['Link Title'] }}
+        </a>
+      </p>
+
     </li>
   </ul>
 </template>

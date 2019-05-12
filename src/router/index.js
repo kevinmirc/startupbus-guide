@@ -2,12 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Buses from '../components/Buses';
 import BusPage from '../components/BusPage';
-import BusSchedule from '../components/BusSchedule';
-import BusPersonnelPage from '../components/BusPersonnelPage';
-import BusSponsorsPage from '../components/BusSponsorsPage';
+import BusResourcePage from '../components/BusResourcePage';
 import BusPaymentsPage from '../components/BusPaymentsPage';
-import BusInfoPage from '../components/BusInfoPage';
-import BusLocationsPage from '../components/BusLocationsPage';
 
 Vue.use(Router);
 
@@ -39,26 +35,38 @@ const router = new Router({
         {
           name: 'Bus Schedule',
           path: '/buses/:id/schedule',
-          component: BusSchedule,
-          props: true,
+          component: BusResourcePage,
+          props: (route) => ({
+            id: route.params.id,
+            resource: 'schedule',
+          }),
         },
         {
           name: 'Bus Personnel',
           path: '/buses/:id/personnel',
-          component: BusPersonnelPage,
-          props: true,
+          component: BusResourcePage,
+          props: (route) => ({
+            id: route.params.id,
+            resource: 'personnel',
+          }),
         },
         {
           name: 'Bus Locations',
           path: '/buses/:id/locations',
-          component: BusLocationsPage,
-          props: true,
+          component: BusResourcePage,
+          props: (route) => ({
+            id: route.params.id,
+            resource: 'locations',
+          }),
         },
         {
           name: 'Bus Sponsors',
           path: '/buses/:id/sponsors',
-          component: BusSponsorsPage,
-          props: true,
+          component: BusResourcePage,
+          props: (route) => ({
+            id: route.params.id,
+            resource: 'sponsors',
+          }),
         },
         {
           name: 'Bus Payments',
@@ -69,8 +77,11 @@ const router = new Router({
         {
           name: 'Bus Info',
           path: '/buses/:id/info',
-          component: BusInfoPage,
-          props: true,
+          component: BusResourcePage,
+          props: (route) => ({
+            id: route.params.id,
+            resource: 'info',
+          }),
         },
       ],
     },

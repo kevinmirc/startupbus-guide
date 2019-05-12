@@ -36,4 +36,12 @@ html, body {
 .bus-detail-page {
   padding: 0 8px;
 }
+
+.extend-bottom {
+  margin-bottom: 38px;
+}
+
+.small-text {
+  font-size: 75%;
+}
 </style>

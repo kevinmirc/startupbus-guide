@@ -6,17 +6,16 @@
         v-else
         class="material-icons circle"
         :style="{ backgroundColor: person.fields['Icon Color'] || 'rgb(137, 226, 255)' }">person</i>
+      
       <span class="title">{{ person.fields.Name }}</span>
-      <p> {{  person.fields.Role }} </p>
-      <small v-if="person.fields.City">
-        <p>{{ person.fields.City }}</p>
-      </small>
-      <small v-if="person.fields.Phone">
-        <p>{{ person.fields.Phone }}</p>
-      </small>
-      <small v-if="person.fields.Email">
-        <p>{{ person.fields.Email }}</p>
-      </small>
+      
+      <p class="small-text"> {{  person.fields.Role }} </p>
+
+      <br>
+
+      <p class="small-text" v-if="person.fields.City">{{ person.fields.City }}</p>
+      <p class="small-text" v-if="person.fields.Phone">{{ person.fields.Phone }}</p>
+      <p class="small-text" v-if="person.fields.Email">{{ person.fields.Email }}</p>
     </li>
   </ul>
 </template>
@@ -28,5 +27,5 @@ export default {
 };
 </script>
 <style lang="css" scoped>
-  
+
 </style>
