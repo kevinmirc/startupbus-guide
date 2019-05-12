@@ -1,7 +1,7 @@
 # StartupBus Guide
 
 ## What Is This?
-This is a mobile web application used for StartupBus participants to have quickly and easily access to their itenerary and other relevant information durring their trip. StatupBus participants can go to [insert link]() and slect their bus for a full itinerary of their trip.
+This is a mobile web application used for StartupBus participants to have quickly and easily access to their itenerary and other relevant information durring their trip. StatupBus participants can go to [kevinmirc.github.io/startupbus-guide/#/buses](https://kevinmirc.github.io/startupbus-guide/#/buses) and slect their bus for a full itinerary of their trip.
 
 ## For Conductors
 
@@ -21,7 +21,7 @@ You'll see that some fields on the Airtable have the option to add an icon. You 
 
 ### Infrastructure
 
-This uses [Airtable]() as the database. Airtable offers an REST API to access the data in the tables. Because Airtable requires a user permissioned Bearer token consume the API, I've set up a proxy server on an AWS API Gateway that will set the Authorization header on requrest. The proxy server only accepts GET, and OPTIONS requests and will pass the path and query params directly to Airtable's api endpoint.
+This uses [Airtable](https://airtable.com/) as the database. Airtable offers an REST API to access the data in the tables. Because Airtable requires a user permissioned Bearer token consume the API, I've set up a proxy server on an AWS API Gateway that will set the Authorization header on requrest. The proxy server only accepts GET, and OPTIONS requests and will pass the path and query params directly to Airtable's api endpoint.
 
 - Proxy Server Endpoint: [https://3a7gh9p22h.execute-api.us-east-1.amazonaws.com/prod](https://3a7gh9p22h.execute-api.us-east-1.amazonaws.com/prod)
 
