@@ -3,7 +3,7 @@
     <div
       class="row valign-wrapper header"
       style="margin-bottom: 0px; height: 48px;"
-      :style="{ backgroundColor: backgroundColor }">
+      :style="{ backgroundColor: backgroundColor, opacity: 0.8 }">
       <div class="col s10">
         <span>{{ pageTitle }}</span>
       </div>
