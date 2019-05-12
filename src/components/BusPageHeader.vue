@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div v-show="$store.state.loading" class="progress" style="margin: 0; margin-top: -4px;">
+    <div v-if="$store.state.loading" class="progress" style="margin: 0; margin-top: -4px;">
       <div class="indeterminate"></div>        
     </div>
 
