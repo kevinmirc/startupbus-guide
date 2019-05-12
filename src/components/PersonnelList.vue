@@ -1,5 +1,5 @@
 <template>
-  <ul class="collection with-header z-depth-1">
+  <ul class="collection with-header z-depth-1" v-show="personnel.length">
     <li class="collection-item avatar" v-for="person in personnel" :key="person.id">
       <img v-if="person.fields.Headshot" class="circle" :src="person.fields.Headshot | thumbnail"></img>
       <i

@@ -5,6 +5,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
+    loading: false,
     buses: [],
     // [busAcronym: stirng]: (Sponsor | Personnel | ...)[];
     sponsors: {},

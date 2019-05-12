@@ -23,8 +23,6 @@ class StartupBus {
     }
 
     const cache = store.getters.busResource(resource, busAcronym);
-    
-    console.log('cache', cache);
 
     if (cache && cache.length) {
       return Promise.resolve(cache);

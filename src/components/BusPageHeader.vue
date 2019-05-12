@@ -1,17 +1,26 @@
 <template>
-  <div class="row valign-wrapper header" style="margin-bottom: 0px; height: 48px;">
-    <div class="col s10">
-      <span>{{ pageTitle }}</span>
+  <div>
+    <div
+      class="row valign-wrapper header"
+      style="margin-bottom: 0px; height: 48px;"
+      :style="{ backgroundColor: backgroundColor }">
+      <div class="col s10">
+        <span>{{ pageTitle }}</span>
+      </div>
+      <div class="col s2 center-align">
+        <span>
+          <router-link :to="{ name: 'Buses' }">
+            <i class="material-icons white-text">directions_bus</i>
+          </router-link>
+        </span>
+      </div>
     </div>
-    <div class="col s2 center-align">
-     <span>
-       <router-link :to="{ name: 'Buses' }">
-          <i class="material-icons white-text">directions_bus</i>
-        </router-link>
-     </span>
+
+    <div v-show="$store.state.loading" class="progress" style="margin: 0; margin-top: -4px;">
+      <div class="indeterminate"></div>        
     </div>
+
   </div>
-</div>
 </template>
 <script>
 export default {
@@ -25,7 +34,19 @@ export default {
         appendix = ` - ${route.params.id}`;
       }
 
-      return `Startup Bus Survival Guide${appendix}`;
+      return `StartupBus Survival Guide${appendix}`;
+    },
+    backgroundColor() {
+      const currentSelectedBus = this.$route.params.id;
+      if (currentSelectedBus) {
+        const buses = this.$store.state.buses
+        if (buses.length) {
+          const targetBus = buses.find(b => b.fields.Acronym === currentSelectedBus);
+          return targetBus.fields.Color;
+        }
+      }
+
+      return '#41bcc4';
     },
   },
 };

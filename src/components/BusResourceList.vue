@@ -27,25 +27,23 @@ export default {
   },
   data() {
     return {
-      loading: false,
       resourceItems: [],
       error: null,
     }
   },
   created() {
     const vm = this;
-    vm.loading = true;
+    vm.$store.state.loading = true;
     
     return startupBus.getResourceListForBus(this.resource, this.id)
       .then((resourceItems) => {
-        console.log('resourceItems', resourceItems);
         vm.resourceItems = resourceItems;
       })
       .catch(() => {
         vm.error = `Failed to get ${resource}`;
       })
       .finally(() => {
-        vm.loading = false;
+        vm.$store.state.loading = false;
       });
   }
 };

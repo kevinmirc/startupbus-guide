@@ -64,14 +64,9 @@ export default {
 
       return url.replace('https://', '').replace('http://', '');
     },
-    // getImage(sponsor) {
-    //   if (sponsor.fields.Image && sponsor.fields.Image.length) {
-    //     return sponsor.fields.Image[0].thumbnails.large.url;
-    //   }
-    // },
   }
 };
 </script>
-<style lang="css" scoped>
+<style lang="css">
 
 </style>

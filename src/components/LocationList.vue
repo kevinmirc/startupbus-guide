@@ -1,5 +1,5 @@
 <template>
-  <ul class="collection with-header z-depth-1">
+  <ul class="collection with-header z-depth-1" v-show="locations.length">
     <li class="collection-item avatar" v-for="location in locations" :key="location.id">
       <i class="material-icons circle teal lighten-2">{{ location.fields.Icon }}</i>
       <span class="title">{{ location.fields.Name }}</span>

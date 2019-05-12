@@ -4,15 +4,12 @@ import VueRouter from 'vue-router';
 import App from './components/App.vue';
 import router from './router';
 import store from './store';
+import { thumbnail } from './services/filters';
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
 
-Vue.filter('thumbnail', function (airtableRecordField) {
-  if (airtableRecordField && airtableRecordField.length) {
-    return airtableRecordField[0].thumbnails.large.url;
-  }
-});
+Vue.filter('thumbnail', thumbnail);
 
 new Vue({
   el: '#app',

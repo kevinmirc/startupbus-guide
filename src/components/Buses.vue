@@ -1,11 +1,6 @@
 <template>
-  <div class="row">
-    <div v-show="loading">
-      <div class="progress">
-        <div class="indeterminate"></div>        
-      </div>
-    </div>        
-    <div v-if="!loading" class="col s12">
+  <div class="row full-height scroll">  
+    <div v-if="buses.length" class="col s12">
       <BusCard v-for="bus in buses" :bus="bus" :key="bus.id"></BusCard>  
     </div>
   </div>
@@ -19,11 +14,11 @@ export default {
   data() {
     return {
       buses: [],
-      loading: true,
       error: null,
     };
   },
   created() {
+    this.$store.state.loading = true;
     return startupBus.getBuses()
       .then((buses) => {
         this.buses = buses;
@@ -33,7 +28,7 @@ export default {
         this.error = 'Failed to get Busess';
       })
       .finally(() => {
-        this.loading = false;
+        this.$store.state.loading = false;
       });
   },
 };
