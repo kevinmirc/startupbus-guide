@@ -5,8 +5,9 @@
         <img class="activator" :src="sponsor.fields.Image | thumbnail">
       </div>
       <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">{{ sponsor.fields.Name }}</span>
-        <p><a :href="sponsor.fields['Website Url']">{{ prettyUrl(sponsor.fields['Website Url']) }}</a></p>
+        <span class="card-title activator grey-text text-darken-4"></span>
+        <span class="card-title activator grey-text text-darken-4">{{ sponsor.fields.Name }}<i class="material-icons right">more_vert</i></span>
+        <!-- <p><a :href="sponsor.fields['Website Url']">{{ prettyUrl(sponsor.fields['Website Url']) }}</a></p> -->
       </div>
       <div class="card-reveal">
         <div class="row">
@@ -41,6 +42,19 @@
               <div>
                 Facebook: {{ sponsor.fields['Facebook Page Name'] }}
                 <a class="secondary-content" target="_blank" :href="sponsor.fields['Facebook URL']">
+                  <i class="material-icons">open_in_new</i>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <ul class="collection with-header">
+            <li class="collection-header">
+              <strong>Details</strong>
+            </li>
+            <li class="collection-item">
+              <div>
+                {{ prettyUrl(sponsor.fields['Website Url']) }}
+                <a class="secondary-content" target="_blank" :href="sponsor.fields['Website Url']">
                   <i class="material-icons">open_in_new</i>
                 </a>
               </div>
