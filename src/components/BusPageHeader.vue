@@ -14,8 +14,8 @@
       </span>
     </div>
 
-    <div class="row" :class="{ progress: !$store.state.loading }" style="margin: 0; position: absolute; top: 44px;">
-      <div :class="{ indeterminate: !$store.state.loading }"></div>        
+    <div class="row" :class="{ progress: $store.state.loading }" style="margin: 0; position: absolute; top: 44px;">
+      <div :class="{ indeterminate: $store.state.loading }"></div>        
     </div>
   </div>
 </template>
