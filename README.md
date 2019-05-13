@@ -7,7 +7,7 @@ This is a mobile web application used for StartupBus participants to have quickl
 
 ### How it Works
 
-- Bus conductors update the airtable with their bus's Sponsors, Personnel, Locations, Schedule, and more on the [Airtable](). Changes are automatically reflected on the application, there is not publication process.
+- Bus conductors update the airtable with their bus's Sponsors, Personnel, Locations, Schedule, and more on the [Airtable](https://airtable.com). Changes are automatically reflected on the application, there is not publication process.
 
 - Have your riders save the website to the homescreen of their phone.
 
