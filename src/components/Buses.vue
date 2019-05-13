@@ -24,9 +24,11 @@ export default {
       .then((buses) => {
         vm.buses = buses;
         vm.error = null;
+        vm.$set(vm.$store.state, 'loading', false);
       })
       .catch((error) => {
         vm.error = 'Failed to get Busess';
+        vm.$set(vm.$store.state, 'loading', false);
       })
       .finally(() => {
         vm.$set(vm.$store.state, 'loading', false);

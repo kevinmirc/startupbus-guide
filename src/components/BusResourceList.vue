@@ -40,9 +40,11 @@ export default {
     return startupBus.getResourceListForBus(this.resource, this.id)
       .then((resourceItems) => {
         vm.resourceItems = resourceItems;
+        vm.$set(vm.$store.state, 'loading', false);
       })
       .catch(() => {
         vm.error = `Failed to get ${resource}`;
+        vm.$set(vm.$store.state, 'loading', false);
       })
       .finally(() => {
         vm.$set(vm.$store.state, 'loading', false);
