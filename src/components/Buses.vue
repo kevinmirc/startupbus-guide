@@ -18,17 +18,18 @@ export default {
     };
   },
   created() {
-    this.$store.state.loading = true;
+    const vm = this;
+    vm.$store.state.loading = true;
     return startupBus.getBuses()
       .then((buses) => {
-        this.buses = buses;
-        this.error = null;
+        vm.buses = buses;
+        vm.error = null;
       })
       .catch((error) => {
-        this.error = 'Failed to get Busess';
+        vm.error = 'Failed to get Busess';
       })
       .finally(() => {
-        this.$store.state.loading = false;
+        vm.$store.state.loading = false;
       });
   },
 };
