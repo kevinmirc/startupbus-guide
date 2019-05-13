@@ -30,7 +30,8 @@ html, body {
 }
 
 .scroll {
-  overflow: scroll;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .bus-detail-page {
