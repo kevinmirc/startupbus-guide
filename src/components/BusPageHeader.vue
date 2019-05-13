@@ -1,25 +1,22 @@
 <template>
-  <div>
-    <div
-      class="row valign-wrapper header"
-      style="margin-bottom: 0px; height: 48px;"
-      :style="{ backgroundColor: backgroundColor, opacity: 0.8 }">
-      <div class="col s10">
-        <span>{{ pageTitle }}</span>
-      </div>
-      <div class="col s2 center-align">
-        <span>
-          <router-link :to="{ name: 'Buses' }">
-            <i class="material-icons white-text">directions_bus</i>
-          </router-link>
-        </span>
-      </div>
+  <div
+    style="height: 48px; margin: 0;"
+    class="row header valign-wrapper"
+    :style="{ backgroundColor: backgroundColor, opacity: 0.8 }">
+    <div class="col s10">
+      <span>{{ pageTitle }}</span>
+    </div>
+    <div class="col s2 center-align">
+      <span>
+        <router-link :to="{ name: 'Buses' }">
+          <i class="material-icons white-text">directions_bus</i>
+        </router-link>
+      </span>
     </div>
 
-    <div :class="{ progress: $store.state.loading }" style="margin: 0; margin-top: -4px;">
-      <div :class="{ indeterminate: $store.state.loading }"></div>        
+    <div class="row" :class="{ progress: !$store.state.loading }" style="margin: 0; position: absolute; top: 44px;">
+      <div :class="{ indeterminate: !$store.state.loading }"></div>        
     </div>
-
   </div>
 </template>
 <script>
@@ -56,7 +53,7 @@ export default {
   background: #41bcc4;
   color: rgba(255,255,255,1);
   font-size: 16px;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   /*width: 100%;*/
 }
 </style>
