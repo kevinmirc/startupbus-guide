@@ -38,6 +38,14 @@ This uses [Airtable](https://airtable.com/) as the database. Airtable offers an 
 - Commit and push to master on GitHub (docs director must be commited to git).
 - Hosted on github pages.
 
+### Deployments
+
+TODO
+- Minify.
+- Import (minified) css and js dependencies. Insead of importing via CDN.
+- API Cache on proxy server (maybe like 1 min cache)
+- Use hash in entry point file name (docs/build-[hash].js.map) to prevent browser caching on new deploymets
+
 ### Updating for Next Year
 
 - Duplicate the Airtable instance.

@@ -45,7 +45,7 @@ export default {
         vm.error = `Failed to get ${resource}`;
       })
       .finally(() => {
-        vm.$store.state.loading = false;
+        vm.$set(vm.$store.state, 'loading', false);
       });
   }
 };

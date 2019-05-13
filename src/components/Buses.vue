@@ -29,7 +29,7 @@ export default {
         vm.error = 'Failed to get Busess';
       })
       .finally(() => {
-        vm.$store.state.loading = false;
+        vm.$set(vm.$store.state, 'loading', false);
       });
   },
 };
